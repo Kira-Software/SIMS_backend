@@ -1,0 +1,32 @@
+{
+  "name": "pro-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Kirubel Girmay",
+  "license": "ISC", 
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "email-templates": "^8.0.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "gravator": "^1.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.3",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.17",
+    "nodemailer-express-handlebars": "^4.0.0",
+    "nodemailer-html-to-text": "^3.1.0",
+    "nodemon": "^2.0.6",
+    "slugify": "^1.5.0"
+  },
+  "devDependencies": {
+    "prettier": "2.1.2"
+  }
+}
