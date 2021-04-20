@@ -35,7 +35,7 @@ const readmission = require("./api/Student/readmission");
 const markclassificaion = require("./api/Instructor/markclassificaion");
 
 const instructormarkentry = require("./api/Instructor/instructormarkentry");
-
+const getstudentid = require("./api/Instructor/getstudentid");
 
 dotenv.config({ path: "./config.env" });
 
@@ -78,7 +78,7 @@ app.use("/api/withdrawal", withdrawal);
 app.use("/api/readmission", readmission);
 app.use("/api/markclassification", markclassificaion);
 app.use("/api/markentry", instructormarkentry);
-
+app.use("/api/getstudentid", getstudentid);
 
 app.use("/", (req, res) =>
   res.send("helow this is from the student backend root directory")
@@ -98,4 +98,3 @@ mongoose
 app.listen(process.env.PORT, () => {
   console.log("the server is listening on port ..." + process.env.PORT);
 });
- 
