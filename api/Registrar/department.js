@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
         // if (!application) {
         //   res.status(400).json({ msg: "there is no application for this api" });
         // }
-        console.log(application.length)
+        console.log(application.length) 
 
         res.json(application);
     } catch (err) {

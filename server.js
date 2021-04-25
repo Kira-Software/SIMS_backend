@@ -36,6 +36,19 @@ const markclassificaion = require("./api/Instructor/markclassificaion");
 
 const instructormarkentry = require("./api/Instructor/instructormarkentry");
 const getstudentid = require("./api/Instructor/getstudentid");
+const departmentapproval = require("./api/Instructor/fordepartmentapproval");
+const departmentapprovalrequests = require("./api/Department/approvalrequests");
+const instructormarkfordept = require("./api/Instructor/instructormarkfordept");
+const forregistrarapproval = require("./api/Department/forregistrarapproval");
+const regapprovalrequests = require("./api/Registrar/regapprovalrequests");
+const instructormarkforregistrar = require("./api/Instructor/instructormarkforregirstrar");
+
+const finalapproval = require("./api/Registrar/finalapproval");
+
+const forstudentmarkentries = require("./api/Student/forstudentmarkentries");
+const courseforstudents = require("./api/Student/courseforstudents");
+
+
 
 dotenv.config({ path: "./config.env" });
 
@@ -79,6 +92,17 @@ app.use("/api/readmission", readmission);
 app.use("/api/markclassification", markclassificaion);
 app.use("/api/markentry", instructormarkentry);
 app.use("/api/getstudentid", getstudentid);
+app.use("/api/departmentapproval", departmentapproval);
+app.use("/api/departmentapprovalrequests", departmentapprovalrequests);
+app.use("/api/instructormarkfordept", instructormarkfordept);
+app.use("/api/forregistrarapproval", forregistrarapproval);
+app.use("/api/regapprovalrequests", regapprovalrequests);
+app.use("/api/instructormarkforregistrar", instructormarkforregistrar);
+app.use("/api/finalapproval", finalapproval);
+app.use("/api/forstudentmarkentries", forstudentmarkentries);
+app.use("/api/courseforstudents", courseforstudents);
+
+
 
 app.use("/", (req, res) =>
   res.send("helow this is from the student backend root directory")

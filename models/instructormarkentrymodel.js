@@ -24,6 +24,17 @@ const instructormarkentryschema = new mongoose.Schema({
   },
   Assessment: {
     type: [Array]
+  },
+  Departmentname:{
+    type: String
+  },
+  Allapproved:{
+    type: Boolean,
+    default: false
+  },
+  Assessmentnumber:{
+    type: Number,
+    default: 0
   }
 });
 

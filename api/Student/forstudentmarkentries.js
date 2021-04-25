@@ -2,13 +2,23 @@
 
 const express = require("express");
 const router = express.Router();
-const Temploginmodel = require("../../models/temploginmodel");
+const Markentrymodel = require("../../models/instructormarkentrymodel");
+//const takenmodel = require("../../models/takenmodel");
 const auth = require("../Middleware/auth");
 
-router.get("/", async (req, res) => {
+router.get("/", auth, async (req, res) => {
   try {
-    //const search = await Coursemodel.find().limit(2);
-    const search = await Temploginmodel.find().select("Studid Id").sort("Id");
+    //const search = await Markentrymodel.find().limit(2);
+    const {  Year, Semister,Deaprtmentname } = req.query;
+    // console.log("the query values are",Coursename, Year, Semister, Section)
+    // console.log("the Instructor id is ",req.user.Id)
+    const search = await Markentrymodel.find({
+      // Year,
+      // Semister,
+      Deaprtmentname,
+      Allapproved: true
+    });
+    
     console.log("the search value is  " + search);
     res.json(search);
   } catch (err) {
