@@ -47,8 +47,7 @@ const finalapproval = require("./api/Registrar/finalapproval");
 
 const forstudentmarkentries = require("./api/Student/forstudentmarkentries");
 const courseforstudents = require("./api/Student/courseforstudents");
-
-
+const calendar = require("./api/Registrar/calendar");
 
 dotenv.config({ path: "./config.env" });
 
@@ -101,8 +100,7 @@ app.use("/api/instructormarkforregistrar", instructormarkforregistrar);
 app.use("/api/finalapproval", finalapproval);
 app.use("/api/forstudentmarkentries", forstudentmarkentries);
 app.use("/api/courseforstudents", courseforstudents);
-
-
+app.use("/api/calendar", calendar);
 
 app.use("/", (req, res) =>
   res.send("helow this is from the student backend root directory")
