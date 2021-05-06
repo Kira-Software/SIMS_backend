@@ -58,6 +58,10 @@ router.post(
             if (Password != user.Password) {
                 res.status(400).json({ errors: [{ msg: "INVALID CREDENTIALS" }] });
             }
+            if (user.Accountblocked === true) {
+                res.status(400).json({ errors: [{ msg: "Sorry this account is blocked" }] });
+            }
+            
 
             const payload = {
                 user: {

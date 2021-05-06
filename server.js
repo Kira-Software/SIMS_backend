@@ -48,6 +48,13 @@ const finalapproval = require("./api/Registrar/finalapproval");
 const forstudentmarkentries = require("./api/Student/forstudentmarkentries");
 const courseforstudents = require("./api/Student/courseforstudents");
 const calendar = require("./api/Registrar/calendar");
+const regrading = require("./api/Registrar/regrading");
+const regradingapproval = require("./api/Instructor/regradingapproval")
+const specialentry = require("./api/Registrar/specialentry");
+const specialentryapproval = require("./api/Instructor/specialentryapproval")
+const accountblock = require("./api/Registrar/accountblock")
+
+
 
 dotenv.config({ path: "./config.env" });
 
@@ -101,6 +108,15 @@ app.use("/api/finalapproval", finalapproval);
 app.use("/api/forstudentmarkentries", forstudentmarkentries);
 app.use("/api/courseforstudents", courseforstudents);
 app.use("/api/calendar", calendar);
+app.use("/api/regrading", regrading);
+app.use("/api/regradingapproval", regradingapproval);
+app.use("/api/specialentry", specialentry);
+app.use("/api/specialentryapproval", specialentryapproval);
+app.use("/api/accountblock", accountblock);
+
+
+
+
 
 app.use("/", (req, res) =>
   res.send("helow this is from the student backend root directory")

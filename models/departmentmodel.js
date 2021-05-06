@@ -17,6 +17,10 @@ const departmentschema = new mongoose.Schema({
   },
   Classes: {
     type : [Array]
+  },
+  Accountblocked: {
+    type:Boolean,
+    default:false
   }
 }); 
 
